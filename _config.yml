@@ -1,10 +1,10 @@
 # Main configuration
 
 # Where things are
-source: .
-destination: ./_site
-plugins: ./_plugins
-layouts: ./_layouts
+source: ./source
+destination: ./destination
+plugins: ./source/_plugins
+layouts: ./source/_layouts
 
 
 # Handling Reading
