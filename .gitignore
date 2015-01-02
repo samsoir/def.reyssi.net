@@ -3,4 +3,4 @@ destination/
 .sass-cache/
 
 *.swp
-.DS_*
+*.DS_Store
