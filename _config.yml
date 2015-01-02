@@ -1,0 +1,28 @@
+# Main configuration
+
+# Where things are
+source: .
+destination: ./_site
+plugins: ./_plugins
+layouts: ./_layouts
+
+
+# Handling Reading
+safe: false
+include: [".htaccess"]
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
+keep_files: [".git", ".svn"]
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Filtering Content
+show_drafts: null
+limit_posts: 0
+future: true
+unpublished: false
+
+# Output
+
+permalink: "/articles/:year/:month/:day/:title"
+paginate_path: /page:num
+timezone: "America/Chicago"
