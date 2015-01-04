@@ -6,7 +6,7 @@ comments: false
 categories: [speaking, dmc]
 ---
 
-[![Dutch Mobile Conference](/images/dmc_wide_speaker.png)](http://mobileconference.nl)
+[![Dutch Mobile Conference](/assets/images/dmc_wide_speaker.png)](http://mobileconference.nl)
 
 I am delighted to announce that I'll be speaking at the [Dutch Mobile Conference](http://mobileconference.nl) in June 2012. I will be presenting _Ten considerations for taking a web business to the mobile market_ on the Friday. The talk will provide attendees with ten useful considerations for taking an existing online business into treacherous world of mobile. Moving an established online business into the mobile domain sounds simple to say. In some cases, it can be simple to perform. But the reality for a lot of companies is that their present model does not necessarily work within a mobile context.
 
