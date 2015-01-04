@@ -1,5 +1,11 @@
 # Main configuration
 
+url: http://def.reyssi.net
+title: def.reyssi.net
+subtitle: An archive of thoughts and discoveries in the world of software development
+author: Sam de Freyssinet
+description:
+
 # Where things are
 source: ./source
 destination: ./destination
@@ -10,7 +16,8 @@ layouts: ./source/_layouts
 # Handling Reading
 safe: false
 include: [".htaccess"]
-exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
+exclude: []
+gems: []
 keep_files: [".git", ".svn"]
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
@@ -22,7 +29,13 @@ future: true
 unpublished: false
 
 # Output
-
-permalink: "/articles/:year/:month/:day/:title"
+permalink: /articles/:year/:month/:day/:title
 paginate_path: /page:num
 timezone: "America/Chicago"
+
+# Twitter
+twitter:
+  consumer_key: ""
+  consumer_secret: ""
+  access_token: ""
+  access_token_secret: ""
