@@ -1,0 +1,63 @@
+// Header
+
+$header-background-color: #000
+$header-logo-font: 20pt $logo-font
+$header-font-weight: 300
+$header-nav-anchor-color: #e0e0e0
+
+header
+  overflow: auto
+  width: $page-width-wide
+  padding: $page-padding-wide
+
+@media screen and (max-width: 1000px)
+  header
+    overflow: auto
+    width: $page-width-med
+    padding: $page-padding-med
+
+@media screen and (max-width: 540px)
+  header
+    overflow: auto
+    width: $page-width-small
+    padding: $page-padding-small
+
+header.main
+  @extend header
+  background-color: $header-background-color
+
+header.main hgroup
+  font: $header-logo-font
+  font-weight: $header-font-weight
+  color: $primary-light-color
+  padding: 10px 0
+  margin: 0 0
+  float: left
+
+@media screen and (max-width: 1000px)
+  header.main h1 a
+    display: block
+    overflow: hidden
+    width: 32pt
+    height: 0px
+    padding-top: 25pt
+    background-image: url('/assets/images/def-reyssi-net-logo-white.png')
+    background-size: 100% 100%
+    background-repeat: none
+
+header.main a
+  color: $primary-light-color
+  text-decoration: none
+
+header.main nav.pages a
+  font: 13pt $font-stack
+  font-weight: $header-font-weight
+  color: $header-nav-anchor-color
+  padding: 0px 18pt
+
+header.main nav.pages ul
+  margin: 11pt 0px
+  list-style-type: none
+
+header.main nav.pages ul li
+  display: inline

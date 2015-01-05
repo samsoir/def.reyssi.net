@@ -1,0 +1,38 @@
+$page-nav-color: #ccc
+$page-nav-color-highlight: $primary-dark-color
+
+.page_navigation
+  padding: 50pt 25%
+  display: block
+  width: 50%
+  overflow: auto
+
+.page_navigation nav
+  font: 14pt $font-stack
+  font-weight: 400
+
+.page_navigation nav a
+  text-decoration: none
+  display: block
+  width: 40%
+  color: $page-nav-color
+  background-color: $primary-light-color
+  padding: 10pt
+
+.page_navigation nav a:hover, .page_navigation nav a:focus
+  color: $page-nav-color-highlight
+  background-color: #e7e7e7
+  box-shadow: 2px 2px 0px #e0e0e0
+
+.page_navigation nav a.prev
+  float: left
+
+.page_navigation nav a.prev:before
+  content: "\00AB "
+
+.page_navigation nav a.next
+  text-align: right
+  float: right
+
+.page_navigation nav a.next:after
+  content: " \00BB"

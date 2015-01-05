@@ -3,6 +3,15 @@
 // def.reyssi.net
 // Base SASS Stylesheet
 
+$page-width-wide: 50%
+$page-padding-wide: 0% 25%
+
+$page-width-med: 80%
+$page-padding-med: 0% 10%
+
+$page-width-small: 100%
+$page-padding-small: 0% 0%
+
 $font-stack: 'Source Sans Pro', sans-serif
 $primary-color: #2f2f2f
 
@@ -10,50 +19,21 @@ $logo-font: 'Merriweather', serif
 
 $fixed-width-font: 'Inconsolata'
 
+$primary-light-color: #efefef
+$primary-dark-color: #2f2f2f
+$primary-background-color: #f5f5f5
+
 // Body
 
 body
   font: 100% $font-stack
-  color: $primary-color
-  background-color: #f5f5f5
+  color: $primary-dark-color
+  background-color: $primary-background-color
 
-// Header
-
-header.main
-  background-color: #000
-  overflow: auto
-  width: 50%
-  padding: 0% 25%
-
-header.main hgroup
-  font: 20pt $logo-font
-  font-weight: 300
-  color: #efefef
-  padding: 10px 0
-  margin: 0 0
-  float: left
-
-header.main a
-  color: #efefef
-  text-decoration: none
-
-header.main nav.pages a
-  font: 13pt $font-stack
-  font-weight: 300
-  display: block
-  padding: 5px 12px
-  color: #e0e0e0
-  
-
-header.main nav.pages ul
-  list-style-type: none
-  padding: 10px 10px
-
-header.main nav.pages ul li
-  float: left
+// Header Section
+@import header
 
 // Footer
-
 footer
   width: 50%
   padding: 100px 25%
@@ -99,10 +79,32 @@ img
 article
   overflow: auto
 
-article header
-  overflow: auto
+.wide_article
   width: 50%
+  padding: 0px 25%
+
+.med_article
+  width: 80%
+  padding: 0px 10%
+
+.small_article
+  width: 100%
+  padding: 0px 0px
+
+article header
+  @extend .wide_article
+  overflow: auto
   padding: 30px 25%
+
+@media screen and (max-width: 1000px)
+  article header
+    width: 80%
+    padding: 0px 10%
+
+@media screen and (max-width: 540px)
+  article header
+    width: 100%
+    padding: 0px 0px
 
 article header h1
   font: 44pt $font-stack
@@ -110,6 +112,22 @@ article header h1
   text-align: center
   letter-spacing: -0.01em
   padding: 50px 0px
+
+@media screen and (max-width: 1000px)
+  article header h1
+    font: 36pt $font-stack
+    padding: 20px 0px
+    font-weight: 200
+    text-align: center
+    letter-spacing: -0.01em
+
+@media screen and (max-width: 540px)
+  article header h1
+    font: 28pt $font-stack
+    padding: 10px 0px
+    font-weight: 300
+    text-align: center
+    letter-spacing: -0.01em
 
 article header h1 a
   text-decoration: none
@@ -137,18 +155,44 @@ article header time
   text-transform: uppercase
 
 article p
+  @extend .wide_article
   font: 12.5pt $logo-font
   font-weight: 300
   color: #202020
   padding: 1.75em 25%
   line-height: 1.6em
   letter-spacing: 0.02em
-  width: 50%
+
+@media screen and (max-width: 1000px)
+  article p
+    font: 12.5pt $logo-font
+    font-weight: 300
+    color: #202020
+    padding: 1.75em 10%
+    line-height: 1.6em
+    letter-spacing: 0.02em
+    width: 80%
+
+@media screen and (max-width: 540px)
+  article p
+    font: 12pt $logo-font
+    font-weight: 300
+    color: #202020
+    padding: 1.75em 5%
+    line-height: 1.5em
+    letter-spacing: 0.01em
+    width: 90%
 
 article p em
   font-style: italic
   font-weight: 300
   color: #1a1a1a
+
+article>p:first-of-type
+  font: 16pt $logo-font
+  font-weight: 300
+  color: #444
+  line-height: 1.5em
 
 article a
   text-decoration: none
@@ -157,15 +201,15 @@ article a
   background-color: #ecf1f9
 
 article ol
+  @extend .wide_article
   list-style-position: outside
   list-style-type: lower-roman
-  width: 50%
   padding: 25px 25% 25px 25%
 
 article ul
+  @extend .wide_article
   list-style-position: outside
   list-style-type: square
-  width: 50%
   padding: 25px 25% 25px 25%
 
 article ul li, article ol li
@@ -199,7 +243,7 @@ article blockquote:after
   font-size: 1.35em
 
 article h2
-  width: 50%
+  @extend .wide_article
   padding: 10px 25%
   margin: 50px 0px
   font: 26pt $font-stack
@@ -208,22 +252,25 @@ article h2
   border-bottom: 1px dotted #222
 
 article pre
+  @extend .wide_article
   background-color: #ececec
   font: 12pt $fixed-width-font
   padding: 40px 25% 40px 25%
-  width: 50%
   border-bottom: 1px dotted #ddd
   border-top: 1px dotted #fff
 
 article h3
+  @extend .wide_article
   font: 14pt $font-stack
   font-weight: 300
   text-transform: lowercase
   color: #B07319
-  width: 50%
   padding: 10px 25%
 
 article p code, article ul code, article li code
   font: 14pt $fixed-width-font
   color: #444
   background-color: #e5e5e5
+
+// Page navigation
+@import page_navigation

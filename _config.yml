@@ -28,6 +28,10 @@ highlighter: pygments
 lsi: false
 excerpt_separator: "\n\n"
 
+# Sass
+sass:
+  sass_dir: /assets/stylesheets
+
 # Filtering Content
 show_drafts: null
 limit_posts: 0

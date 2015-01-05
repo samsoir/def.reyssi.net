@@ -153,8 +153,8 @@ At this point you are ready to start using libzmq in your code. To use the ØMQ 
 
 ## Footnotes
 
-<strong id=“f1”>1.</strong> As the name implies, armv7 instructions can be executed on armv7s architectures, but the reverse is not true. The armv7s architecture provides additional instructions that provide faster execution of code over armv7, so it is worth supporting it when possible.
+<p><strong id="f1">1.</strong> As the name implies, armv7 instructions can be executed on armv7s architectures, but the reverse is not true. The armv7s architecture provides additional instructions that provide faster execution of code over armv7, so it is worth supporting it when possible.</p>
 
-<strong id=“f2”>2.</strong> Anyone that is put off by this, it is worth mentioning that there is an [Objective C](https://github.com/jeremy-w/objc-zmq) higher level wrapper in existence.
+<p><strong id="f2">2.</strong> Anyone that is put off by this, it is worth mentioning that there is an <a href="https://github.com/jeremy-w/objc-zmq">Objective C</a> higher level wrapper in existence.</p>
 
-<strong id=“f3”>3.</strong> I decided not to support armv6 at this point. It may be added in in future if demand shows it is worthwhile. Or there is a pull request.
+<p><strong id="f3">3.</strong> I decided not to support armv6 at this point. It may be added in in future if demand shows it is worthwhile. Or there is a pull request.</p>
