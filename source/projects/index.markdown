@@ -4,6 +4,7 @@ title: "Projects"
 comments: false
 sharing: false
 footer: false
+include_menu: true
 ---
 
 I have been working in the computer industry since 2001. In that time I have worked on a number of exciting projects across a broad spectrum of industries. I have catalogued some of those projects here due to the brevity of their existence.

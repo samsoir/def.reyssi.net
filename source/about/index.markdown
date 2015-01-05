@@ -4,6 +4,7 @@ title: About
 comments: false
 sharing: false
 footer: true
+include_menu: true
 ---
 
  ![Sam de Freyssinet](/assets/images/sam.png)

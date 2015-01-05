@@ -7,12 +7,13 @@ published: true
 categories: [ios, phonegap, code]
 ---
 
-![iOS Date Picker](/assets/images/datepicker.png)
-
 Recently my team were using [_PhoneGap_](http://phonegap.com/), the HTML5 middleware that enables web developers to write mobile apps once using technologies they know; HTML5, CSS and Javascript. The completed PhoneGap/HTML5 application is then compiled into binaries for each of the [supported mobile platforms](http://phonegap.com/about/features). The idea is simple, developers write code once and deploy many times. PhoneGap can certainly be used for creating simple applications, but stray from the [core API](http://docs.phonegap.com/en/1.4.1/index.html) and you quickly find yourself either writing a native extension; or more likely finding a plugin that does the task for you.
+
 <!-- more -->
 
 As part of a research project for my employer we were writing a mobile application using the PhoneGap platform. The application in question was a relatively simple concept, however it quickly became apparent we would have to go outside of the core API. 
+
+![iOS Date Picker](/assets/images/datepicker.png)
 
 PhoneGap does not provide a standard way to create a date picker, instead delegating the vast majority of interface responsibilities to the application and/or framework chosen to author the application. In our case we were using [JQuery Mobile](http://jquerymobile.com/) for the application user interface. There are others available, [Sencha Touch](http://www.sencha.com/products/touch/) being another popular one from the creators of [ExtJS](http://www.sencha.com/products/extjs/).
 
@@ -93,7 +94,8 @@ One other implementation detail was also causing concern. The `UIActionSheet` cl
 	[datePickerSheet dismissWithClickedButtonIndex:0 animated:YES];
 	[datePickerSheet release];
 	[datePicker release];
-	NSString* jsCallback = [NSString stringWithFormat:@"window.plugins.datePicker._dateSelected(\"%i\");", (int)[self.datePicker.date timeIntervalSince1970]];
+	NSString* jsCallback = [NSString stringWithFormat:@"window.plugins.datePicker._dateSelected(\"%i\");", \
+                  (int)[self.datePicker.date timeIntervalSince1970]];
 	[super writeJavascript:jsCallback];
 	isVisible = NO;
 }

@@ -5,7 +5,16 @@
 </head>
 <body>
 {% include header.html %}
+<article class="post">
+<header>
+<h1><a href="#" rel="bookmark" title="link to this post">{{page.title}}</a></h1>
+<h2>Written by {{site.author}}</h2>
+<time datetime="{{page.date}}" pubdate="pubdate">
+{{page.date | date_to_long_string}}
+</time>
+</header>
 {{content}}
+</article>
 {% include footer.html %}
 </body>
 </html>

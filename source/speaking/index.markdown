@@ -4,6 +4,7 @@ title: "Speaking"
 comments: false
 sharing: false
 footer: false
+include_menu: true
 ---
 
 <div id="blog-archives">

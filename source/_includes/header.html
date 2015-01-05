@@ -1,13 +1,14 @@
 <header class="main">
 <hgroup>
-<h1>{{site.title}}</h1>
-<h2>{{site.subtitle}}</h2>
+<h1><a href="/">{{site.title}}</a></h1>
 </hgroup>
 {% if site.pages %}
 <nav class="pages">
 <ul>
 {% for page in site.pages %}
+{% if page.include_menu %}
 <li><a href="{{page.url}}">{{page.title}}</a></li>
+{% endif %}
 {% endfor %}
 </ul>
 {% endif %}

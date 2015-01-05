@@ -1,0 +1,29 @@
+---
+layout: post
+title: Jekyll
+date: 2015-01-10 12:00:00 -0600
+comments: false
+categories: [software]
+---
+
+This blog has changed. Hopefully you are already noticing the face lift provided to the interface and experience. Equally hopefully you are enjoying those changes. But beauty is more than skin deep. This site has till now been powered by the excellent [Octopress](http://octopress.org) blogging platform. I wrote previously on the subject in [January 2012]({% post_url 2012-01-14-hello-2012 %}). From today I have replaced Octopress with [Jekyll](http://jekyllrb.com).
+
+<!-- more -->
+
+For those who are unaware, Jekyll and Octopress are directly related as the former is the foundation of the latter. Octopress builds upon Jekyll adding conventions for managing posts and other content, plus tooling to allow less technical people to quickly and easily get writing. In all honesty, if all you want to do is write content on a platform you own, then Octopress is very good.
+
+The reason for change came when I wanted to alter my Octopress site to better represent me, or rather my digital projection. Octopress comes with a pre-packed interface, including all necessary HTML and SASS templates. Vanilla Octopress sites all look pretty much identical when you compare them, and mine certainly was looking very Vanilla. If you want to change something on these pre-existing templates and stylesheets, you have to wade through thousands of lines of others code and reverse engineer their intention. I ended up wiping everything and starting from nothing as I was getting lost in the enormity of it all. However this panned out less well as the site completely failed to function. 
+
+Alternatively there are a lot of very smart looking [third party themes for Octopress](https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes). But none of those expressed me, I needed to own my presentation.
+
+It dawned on me that I was mostly getting lost and frustrated with Octopress because I had never made the investment in learning how it worked. How could I possible hope to bend a tool to my needs without comprehending the internals?
+
+With that in mind I set about rebuilding this site from nothing using components only when I needed them. The first tool I started using was of course Jekyll. I did require an engine to transform these written words from their native [Markdown](http://daringfireball.net/projects/markdown/syntax) format to HTML5. Jekyll provides almost everything I needed at this point, including the Kramdown conversion engine. This site also had a number of existing posts and pages, all written in Octopress. The first task would be to import the existing content and see if Jekyll could still build this site.
+
+After copying the source posts into place and running the Jekyll build command I sighed in slight dismay as Jekyll reported many issues attempting to render pages. As it turned out, most of the issues where due to Liquid template calls that required plugins I had not loaded yet. At this point I could either have found the required Gems and/or Plugins, added them to Jekyll and moved on. However I wanted to get a much better understand of each component and its responsibility.
+
+As it turned out, many of the asserted requirements were nice features Octopress adds. But under closer inspection they were not what I needed to achieve the same goals and actually took much control away from me if I wasn't interested in understanding their particular opinions. In most cases I found an existing method in Jekyll that provided the same if not better results, removed a lot of Liquid template elements from the originating source content and generally tidied up the Markdown considerably. With these changes in place, Jekyll began building without issue and my existing content was available.
+
+Now to the presentation and the art of CSS mastery. Many years ago I used to work a lot in the browser as what is generally referred to as a full stack engineer. In the last five years or so I have really not paid much attention to what has developed in the front end arena. Back in 2009 HTML5 was defined but far from established. CSS3 was also beginning to appear in the fringes, but most people worked having to support older browsers. Fast-forward to today and the landscape has changed incredibly.
+
+[SASS](http://sass-lang.com) in 2008 was an emerging tool that was quite divisive in some quarters. I remember overhearing many of my colleagues in London either praising or dismissing it. Today it appears are a standard for writing maintainable CSS. Having quickly learnt SASS over the holiday, I now clearly understand why people use it over writing conventional CSS. Jekyll supports SASS natively, as well as its stricter sibling language _SCSS_ providing syntax closer to CSS.

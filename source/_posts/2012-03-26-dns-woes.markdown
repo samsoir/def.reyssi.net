@@ -6,11 +6,11 @@ comments: false
 categories: [dns]
 ---
 
- ![Kill all the servers](http://assets.diylol.com/hfs/2b6/858/748/resized/x-all-the-things-meme-generator-kill-all-the-servers-1abf33.jpg)
-
 Just a quick note to say that I have been experiencing some DNS woes with this domain. As a result, many of you have probably been seeing a far from beautiful `404 Not Found` served by my former hosting company. Initially I thought this was an issue with my [Heroku](http://heroku.com) web dynos. However after doing some further DNS analysis and investigation I discovered that I had what can only be described as _DNS EpicFAIL_!
 
 <!-- more -->
+
+ ![Kill all the servers](http://assets.diylol.com/hfs/2b6/858/748/resized/x-all-the-things-meme-generator-kill-all-the-servers-1abf33.jpg)
 
 When this site was on the previous host it was hosting its own DNS server using [Bind](http://www.isc.org/software/bind). Because there was only one piece of bare metal there needed to be a backup DNS server hosted elsewhere. At the time I decided to use a free service offered by a company based out of California. I will not advertise them here, not through lack of service but to ensure their offerring is not abused by the masses. I setup the secondary DNS host to be a slave to the primary Bind DNS server hosted on my bare metal. This all worked beautifully for several years.
 
